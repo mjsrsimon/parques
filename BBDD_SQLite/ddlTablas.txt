@@ -38,3 +38,13 @@ CREATE TABLE "Espectaculo" (
 	PRIMARY KEY("idEspectaculo" AUTOINCREMENT),
 	FOREIGN KEY (responsable) REFERENCES Empleado(idEmpleado)
 );
+
+
+CREATE TABLE "Inscripcion" (
+	"idCliente"	INTEGER,
+	"idEspectaculo"	INTEGER,
+	"fecha"	TEXT,
+	PRIMARY KEY("idCliente","idEspectaculo"),
+	FOREIGN KEY("idCliente") REFERENCES "Cliente"("idCliente"),
+	FOREIGN KEY("idEspectaculo") REFERENCES "Espectaculo"("idEspectaculo")
+);
