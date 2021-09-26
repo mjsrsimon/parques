@@ -1,0 +1,5 @@
+
+
+DIFERENCIAS ENTRE ASOCIACION / AGREGACION / COMPOSICION EN DIAGRAMAS DE CLASES UML.
+
+https://www.seas.es/blog/informatica/agregacion-vs-composicion-en-diagramas-de-clases-uml/
