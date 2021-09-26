@@ -34,5 +34,7 @@ CREATE TABLE "Espectaculo" (
 	"fecha"	TEXT,
 	"horario"	TEXT,
 	"baja"	INTEGER DEFAULT 0,
-	PRIMARY KEY("idEspectaculo" AUTOINCREMENT)
+	"responsable" INTEGER,
+	PRIMARY KEY("idEspectaculo" AUTOINCREMENT),
+	FOREIGN KEY (responsable) REFERENCES Empleado(idEmpleado)
 );
