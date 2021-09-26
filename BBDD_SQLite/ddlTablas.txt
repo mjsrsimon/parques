@@ -30,7 +30,7 @@ CREATE TABLE "Espectaculo" (
 	"aforo"	INTEGER NOT NULL,
 	"descripcion"	TEXT,
 	"lugar"	TEXT,
-	"coste"	TEXT,
+	"coste"	REAL,
 	"fecha"	TEXT,
 	"horario"	TEXT,
 	"baja"	INTEGER DEFAULT 0,
@@ -41,10 +41,11 @@ CREATE TABLE "Espectaculo" (
 
 
 CREATE TABLE "Inscripcion" (
-	"idCliente"	INTEGER,
-	"idEspectaculo"	INTEGER,
-	"fecha"	TEXT,
-	PRIMARY KEY("idCliente","idEspectaculo"),
-	FOREIGN KEY("idCliente") REFERENCES "Cliente"("idCliente"),
-	FOREIGN KEY("idEspectaculo") REFERENCES "Espectaculo"("idEspectaculo")
+	"idCliente"	INTEGER NOT NULL UNIQUE,
+	"idEspectaculo"	INTEGER NOT NULL UNIQUE,
+	"fecha"	TEXT NOT NULL UNIQUE,
+	"idInscripcion"	INTEGER,
+	PRIMARY KEY("idInscripcion" AUTOINCREMENT),
+	FOREIGN KEY("idEspectaculo") REFERENCES "Espectaculo"("idEspectaculo"),
+	FOREIGN KEY("idCliente") REFERENCES "Cliente"("idCliente")
 );
