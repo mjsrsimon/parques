@@ -1,0 +1,38 @@
+DDL TABLAS EN SQLITE  
+
+CREATE TABLE "Empleado" (
+	"idEmpleado"	INTEGER UNIQUE,
+	"dni"	TEXT NOT NULL,
+	"nombre"	TEXT NOT NULL,
+	"apellidos"	TEXT NOT NULL,
+	"fechaNacimiento"	TEXT,
+	"fechaContratacion"	TEXT,
+	"nacionalidad"	TEXT,
+	"cargo"	TEXT,
+	"baja"	INTEGER DEFAULT 0,
+	PRIMARY KEY("idEmpleado" AUTOINCREMENT)
+);
+
+CREATE TABLE "Cliente" (
+	"idCliente"	INTEGER UNIQUE,
+	"dni"	TEXT NOT NULL,
+	"nombre"	TEXT NOT NULL,
+	"apellidos"	TEXT NOT NULL,
+	"fechaNacimiento"	TEXT,
+	"baja"	INTEGER DEFAULT 0,
+	PRIMARY KEY("idCliente" AUTOINCREMENT)
+);
+
+CREATE TABLE "Espectaculo" (
+	"idEspectaculo"	INTEGER UNIQUE,
+	"numero"	INTEGER NOT NULL,
+	"nombre"	TEXT NOT NULL,
+	"aforo"	INTEGER NOT NULL,
+	"descripcion"	TEXT,
+	"lugar"	TEXT,
+	"coste"	TEXT,
+	"fecha"	TEXT,
+	"horario"	TEXT,
+	"baja"	INTEGER DEFAULT 0,
+	PRIMARY KEY("idEspectaculo" AUTOINCREMENT)
+);
