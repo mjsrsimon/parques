@@ -1,0 +1,12 @@
+ CONEXION A LA BASE DE DATOS SQLITE A LA MIA EN MI EQUIPO.
+ 
+String baseDatos = "D:\\3DAM\\ACCESO_A_DATOS\\T2 Ion Marin\\Proyecto con Fran y Maria\\parques\\BBDD_SQLite\\bdSqlite.db";
+
+        Connection conexion=null;
+        try{
+            Class.forName("org.sqlite.JDBC");
+            conexion = DriverManager.getConnection("jdbc:sqlite:" + baseDatos );
+            System.out.println("Conectado a la base de datos SQLite [ " + baseDatos + "]");
+        }catch(Exception e){
+            System.out.println("No nos hemos podido conectar");
+        }
