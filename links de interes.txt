@@ -1,1 +1,33 @@
 http://dalila.sip.ucm.es/~manuel/JSW1/Slides/Swing.pdf
+
+***********************CREAR UNA CLASE GENERIC ********************************
+https://www.arquitecturajava.com/uso-de-java-generics/
+
+https://www.arquitecturajava.com/java-generic-repository-y-jpa/ --> este es el bueno.
+
+
+clase cliente
+clase empleado
+
+clase comun que es la que tenemos que desarrollar:
+
+
+package com.arquitecturajava.genericos;
+import java.util.ArrayList;
+import java.util.Iterator;
+public class Comun < T > implements Iterable < T > {
+ private ArrayList < T > lista = new ArrayList < T > ();
+
+ public Comun() {
+  super();
+ }
+ public void add(T objeto) {
+   lista.add(objeto); 
+ }
+
+***************************************************************************************
+
+ public Iterator < T > iterator() {
+  return lista.iterator();
+ }
+}
