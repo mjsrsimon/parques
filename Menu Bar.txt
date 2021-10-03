@@ -1,0 +1,67 @@
+JMenuBar menuBar = new JMenuBar();
+
+        //Menus: clientes, empleados, espectaculos....
+        JMenu MenuClientes = new JMenu("Clientes");
+        JMenu MenuEmpleados = new JMenu("Empleados");
+        JMenu MenuEspectaculos = new JMenu("Espectáculos");
+
+
+        // Items a agregar a cada menu.
+        JMenuItem itemNuevoCliente = new JMenuItem("Nuevo");
+        JMenuItem itemModificarCliente = new JMenuItem("Modificar");
+
+        JMenuItem itemNuevoEmpleado = new JMenuItem("Nuevo");
+        JMenuItem itemModificarEmpleado= new JMenuItem("Modificar");
+
+        JMenuItem itemNuevoEspectaculo = new JMenuItem("Nuevo");
+        JMenuItem itemModificarEspectaculo= new JMenuItem("Modificar");
+
+        // Aqui añadimos el item a cada menu.
+        MenuEmpleados.add(itemNuevoEmpleado);
+        MenuEmpleados.add(itemModificarEmpleado);
+
+        MenuClientes.add(itemNuevoCliente);
+        MenuClientes.add(itemModificarCliente);
+
+        MenuEspectaculos.add(itemNuevoEspectaculo);
+        MenuEspectaculos.add(itemModificarEspectaculo);
+
+        //Formamos el menu bar
+        menuBar.add(MenuEmpleados);
+        menuBar.add(MenuClientes);
+        menuBar.add(MenuEspectaculos);
+
+
+
+        frame.add(menuBar); //Añadir el menu bar al frame. Se tiene que añadir al frame principal porque de este se arrastra a todos.
+        frame.setJMenuBar(menuBar);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* System.out.println("he llegado");
+                JFrame f = new JFrame("Parque ... ");
+                f.add(menuBar);
+                f.setJMenuBar(menuBar);
+                DatosClientes clienteModificar = new DatosClientes();
+                JPVacio = clienteModificar.getJPClientes();
+                f.setContentPane(JPVacio);
+                // f.setContentPane(clienteModificar.getJPGeneral(f));
+                f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                f.pack();
+                f.setVisible(true);
+                frame.setVisible(false);*/

@@ -1,0 +1,12 @@
+tareas proyecto:
+
+- calendario
+- tabla para seleccionar 1 dato -- donde sea un select * from ....
+- metadatos: revisar si hay que meter datos de tablas y columnas.
+- Inscripciones: 
+	- crear 2 listas y unificar con un boton añadir
+	es decir fulanito de tal se inscribe en 1 evento
+	
+	- mostrar todas inscripciones. 
+	
+	
